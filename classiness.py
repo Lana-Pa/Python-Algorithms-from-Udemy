@@ -25,13 +25,14 @@ class Classy(object):
     
     def getClassiness(self):
         classiness = 0
-        for i in self.items:
-            if i == 'tophat':
-                classiness += 2
-            elif i == 'bowtie':
-                classiness += 4
-            elif i == 'monocle':
-                classiness += 5
+        if len(self.items) > 0:
+            for i in self.items:
+                if i == 'tophat':
+                    classiness += 2
+                elif i == 'bowtie':
+                    classiness += 4
+                elif i == 'monocle':
+                    classiness += 5
         return classiness
 
 # Test cases
